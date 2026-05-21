@@ -94,4 +94,22 @@ Domain Path: /languages
 @media only screen and (max-width: 767px) {
 
 }
+/* ===== TEST WP PUSHER ===== */
 
+body {
+  background: linear-gradient(45deg, #ff0000, #ffcc00, #00ff00, #00ccff);
+}
+
+h1 {
+  color: white !important;
+  background: black;
+  padding: 20px;
+  text-align: center;
+  font-size: 40px !important;
+}
+
+p {
+  font-size: 20px;
+  color: blue !important;
+  font-weight: bold;
+}
