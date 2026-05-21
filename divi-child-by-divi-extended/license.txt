@@ -1,0 +1,15 @@
+Divi Child by Divi Extended
+===========================
+
+- Copyright 2026 Elicus Technologies Private Limited
+- License: GPLv2
+- License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+
+This software is released under the GNU General Public License, Version 2.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+For the full license text, please visit:
+https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
