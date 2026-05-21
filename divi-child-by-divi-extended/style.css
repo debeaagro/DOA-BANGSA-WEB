@@ -101,8 +101,8 @@ body {
 }
 
 h1 {
-  color: white !important;
-  background: black;
+  color: black !important;
+  background: transparent !important;
   padding: 20px;
   text-align: center;
   font-size: 40px !important;
