@@ -94,29 +94,38 @@ Domain Path: /languages
 @media only screen and (max-width: 767px) {
 
 }
-/* ===== TEST WP PUSHER ===== */
+/* ===== ELEGANT UTILITIES & MICRO-ANIMATIONS ===== */
 
-body {
-  background: linear-gradient(45deg, #ff0000, #ffcc00, #00ff00, #00ccff);
-}
-
-h1 {
-  color: black !important;
-  background: transparent !important;
-  padding: 20px;
-  text-align: center;
-  font-size: 40px !important;
+/* Enable Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-p {
-  font-size: 20px;
-  color: blue !important;
-  font-weight: bold;
+/* Custom Elegant Scrollbar for Webkit Browsers */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
-/* TEST UPDATE DARI GITHUB BERHASIL */
-body {
-  outline: 5px solid red;
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
 }
+
+::-webkit-scrollbar-thumb {
+  background: #0c543a; /* Hijau Agrobisnis */
+  border-radius: 5px;
+  border: 2px solid #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #15803d; /* Hover Green */
+}
+
+/* Subtle transitions for buttons and links across the site */
+a, button, .et_pb_button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
 
 /* Mengubah warna tulisan judul di Smart Slider 3 menjadi merah */
 div.n2-section-smartslider h2,
