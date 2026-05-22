@@ -118,9 +118,12 @@ body {
   outline: 5px solid red;
 }
 
-/* Mengubah warna tulisan "Produk Unggulan Kami" di Smart Slider 3 menjadi kuning */
+/* Mengubah warna tulisan judul di Smart Slider 3 menjadi merah */
+div.n2-section-smartslider h2,
+div.n2-section-smartslider h2 *,
 #n2-ss-3item4,
 #n2-ss-3item5,
 .n2-font-83b35d252d2ad18eea7c19446dd119dd-hover {
-  color: #ffcc00 !important; /* warna kuning premium */
+  color: #ff0000 !important; /* warna merah */
 }
+
