@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk Unggulan | Doa Bangsa Agrobisnis</title>
+    <meta name="description" content="Menghadirkan produk pertanian unggulan dengan kualitas terpercaya untuk mendukung produktivitas dan kemajuan agribisnis Indonesia. Temukan pupuk organik, benih unggul, pestisida alami, dan alat pertanian modern.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+
+    <!-- Premium Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../" class="back-home-btn">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+            </a>
+            <div class="brand-logo-text">
+                <i class="fa-solid fa-seedling logo-icon"></i>
+                <span class="brand-name">DOA BANGSA <span class="accent-text">AGROBISNIS</span></span>
+            </div>
+            <a href="https://wa.me/6281318466100" target="_blank" class="contact-header-btn">
+                <i class="fa-brands fa-whatsapp"></i> Hubungi Kami
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fa-solid fa-star"></i> Kualitas Terpercaya</span>
+            <h1 class="hero-title text-hitam-pekat">Produk Unggulan Kami</h1>
+            <p class="hero-subtitle text-hitam-pekat">
+                Menghadirkan produk pertanian unggulan dengan kualitas terpercaya untuk mendukung produktivitas dan kemajuan agribisnis Indonesia.
+            </p>
+        </div>
+    </section>
+
+    <!-- Catalog Main Area -->
+    <main class="catalog-container">
+        <!-- Search, Filter & Toolbar -->
+        <div class="toolbar-section">
+            <div class="search-box-wrapper">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="productSearch" placeholder="Cari pupuk, benih, alat pertanian..." aria-label="Cari Produk">
+                <button id="clearSearchBtn" class="clear-search-btn" style="display: none;">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div class="sort-wrapper">
+                <label for="productSort" class="sort-label"><i class="fa-solid fa-filter-list"></i> Urutkan:</label>
+                <select id="productSort" class="sort-select">
+                    <option value="default">Default</option>
+                    <option value="name-asc">Nama (A - Z)</option>
+                    <option value="name-desc">Nama (Z - A)</option>
+                    <option value="price-asc">Harga Terendah</option>
+                    <option value="price-desc">Harga Tertinggi</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Category Horizontal Navigation -->
+        <nav class="category-nav" aria-label="Kategori Produk">
+            <div class="category-tabs" id="categoryTabs">
+                <button class="category-tab active" data-category="all">
+                    <i class="fa-solid fa-grip"></i> Semua Produk
+                </button>
+                <button class="category-tab" data-category="pupuk">
+                    <i class="fa-solid fa-bottle-droplet"></i> Pupuk & Nutrisi
+                </button>
+                <button class="category-tab" data-category="benih">
+                    <i class="fa-solid fa-seedling"></i> Benih Unggul
+                </button>
+                <button class="category-tab" data-category="pestisida">
+                    <i class="fa-solid fa-shield-halved"></i> Perlindungan Tanaman
+                </button>
+                <button class="category-tab" data-category="peralatan">
+                    <i class="fa-solid fa-screwdriver-wrench"></i> Alat & Mesin tani
+                </button>
+            </div>
+        </nav>
+
+        <!-- Dynamic Results Counter -->
+        <div class="results-meta">
+            <span class="results-count" id="resultsCount">Menampilkan 0 produk</span>
+        </div>
+
+        <!-- Product Grid -->
+        <section class="products-grid" id="productsGrid">
+            <!-- Dynamic Cards Loaded by JS -->
+            <div class="catalog-loading">
+                <div class="spinner"></div>
+                <p>Memuat katalog produk...</p>
+            </div>
+        </section>
+
+        <!-- No Products Found State -->
+        <div class="no-products-state" id="noProductsState" style="display: none;">
+            <i class="fa-regular fa-face-frown empty-icon"></i>
+            <h3>Produk Tidak Ditemukan</h3>
+            <p>Maaf, kami tidak menemukan produk yang cocok dengan pencarian atau filter Anda.</p>
+            <button id="resetFiltersBtn" class="reset-btn">Reset Filter & Pencarian</button>
+        </div>
+    </main>
+
+    <!-- Quick View / Detail Modal -->
+    <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Tutup Detail">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <div class="modal-body">
+                <div class="modal-image-area">
+                    <img id="modalProductImg" src="" alt="Detail Produk">
+                    <span id="modalProductBadge" class="modal-badge">Kategori</span>
+                </div>
+                
+                <div class="modal-info-area">
+                    <h2 id="modalTitle" class="modal-title">Nama Produk</h2>
+                    <div class="modal-price-tag" id="modalPrice">Rp 0</div>
+                    
+                    <p id="modalDesc" class="modal-desc">Deskripsi lengkap produk akan ditampilkan di sini.</p>
+                    
+                    <div class="modal-specs">
+                        <h3>Spesifikasi & Keunggulan:</h3>
+                        <table class="specs-table">
+                            <tbody id="modalSpecsBody">
+                                <!-- Dynamic specs loaded by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <a href="#" id="modalWaBtn" target="_blank" class="modal-cta-btn">
+                            <i class="fa-brands fa-whatsapp"></i> Tanya / Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action WhatsApp Button -->
+    <a href="https://wa.me/6281318466100" class="floating-wa-btn" target="_blank" aria-label="Hubungi via WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="tooltip-text">Hubungi Kami</span>
+    </a>
+
+    <!-- Simple Footer -->
+    <footer class="catalog-footer">
+        <p>&copy; 2026 <a href="../" class="footer-link">Doa Bangsa Agrobisnis</a>. Seluruh hak cipta dilindungi.</p>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="catalog.js"></script>
+</body>
+</html>
