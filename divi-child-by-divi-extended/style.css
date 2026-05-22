@@ -378,3 +378,17 @@ div.n2-section-smartslider h2 *,
         transform: translateY(-2px);
     }
 }
+
+/* ===== UTILITY: SOLID BLACK TEXT ===== */
+.teks-hitam-pekat h1,
+.teks-hitam-pekat h2,
+.teks-hitam-pekat h3,
+.teks-hitam-pekat h4,
+.teks-hitam-pekat h5,
+.teks-hitam-pekat h6,
+.teks-hitam-pekat p,
+.teks-hitam-pekat span,
+.teks-hitam-pekat .et_pb_text_inner {
+  color: #000000 !important;
+}
+
