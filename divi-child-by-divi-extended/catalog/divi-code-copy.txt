@@ -1,0 +1,1052 @@
+<!-- =========================================================================
+     DOA BANGSA AGROBISNIS - KODE COPY-PASTE UNTUK DIVI CODE MODULE
+     
+     Petunjuk Penggunaan:
+     1. Buat halaman baru di WordPress (Pages > Add New) dan gunakan Divi Builder.
+     2. Tambahkan Section/Row standar, lalu buat modul "Code" (Modul Kode).
+     3. Salin seluruh isi file ini dan tempel (paste) ke dalam Modul Kode tersebut.
+     4. Publikasikan halaman. Katalog produk premium akan langsung muncul!
+     ========================================================================= -->
+
+<!-- Load Fonts & Icons -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* ----------------------------------------------------
+   CATALOG CSS SYSTEM - DOA BANGSA AGROBISNIS
+   Aesthetic: Premium, Clean, Modern, & High-Contrast
+---------------------------------------------------- */
+
+.db-catalog-wrapper {
+    --primary: #0c543a; /* Hijau Agrobisnis */
+    --primary-light: #167e59;
+    --primary-ultra-light: #e8f5e9;
+    --accent: #d4af37; /* Gold Accent */
+    --text-dark: #0f172a; /* Slate 900 */
+    --text-medium: #334155; /* Slate 700 */
+    --text-light: #64748b; /* Slate 500 */
+    --bg-light: #f8fafc; /* Slate 50 */
+    --bg-card: #ffffff;
+    --border-color: #e2e8f0;
+    --whatsapp-green: #25d366;
+    --whatsapp-dark: #128c7e;
+    
+    --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    --shadow-sm: 0 2px 8px -1px rgba(12, 84, 58, 0.04);
+    --shadow-md: 0 10px 25px -5px rgba(12, 84, 58, 0.08), 0 8px 16px -6px rgba(12, 84, 58, 0.08);
+    --shadow-lg: 0 20px 40px -10px rgba(12, 84, 58, 0.12), 0 12px 20px -8px rgba(12, 84, 58, 0.12);
+    
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-full: 9999px;
+    
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    font-family: var(--font-body);
+    background-color: var(--bg-light);
+    color: var(--text-medium);
+    padding: 40px 10px;
+    border-radius: var(--radius-lg);
+    margin: 20px 0;
+}
+
+.db-catalog-wrapper * {
+    box-sizing: border-box;
+}
+
+.db-catalog-wrapper h1, 
+.db-catalog-wrapper h2, 
+.db-catalog-wrapper h3, 
+.db-catalog-wrapper h4 {
+    font-family: var(--font-heading) !important;
+    color: var(--text-dark) !important;
+    font-weight: 700;
+}
+
+/* Hero Section */
+.db-catalog-wrapper .hero-section {
+    position: relative;
+    padding: 60px 24px;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.db-catalog-wrapper .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--primary-light) 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+    opacity: 0.07;
+    pointer-events: none;
+}
+
+.db-catalog-wrapper .hero-content {
+    position: relative;
+    max-width: 800px;
+    z-index: 2;
+}
+
+.db-catalog-wrapper .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--primary);
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.db-catalog-wrapper .hero-title.text-hitam-pekat {
+    font-size: 2.8rem !important;
+    font-weight: 800 !important;
+    color: #0c0d0d !important;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.db-catalog-wrapper .hero-subtitle.text-hitam-pekat {
+    font-size: 1.1rem !important;
+    color: #27272a !important;
+    max-width: 650px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+/* Toolbar */
+.db-catalog-wrapper .toolbar-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.db-catalog-wrapper .search-box-wrapper {
+    position: relative;
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+}
+
+.db-catalog-wrapper .search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.db-catalog-wrapper .search-box-wrapper input {
+    width: 100% !important;
+    height: auto !important;
+    padding: 14px 45px 14px 48px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--radius-md) !important;
+    background-color: var(--bg-card) !important;
+    color: var(--text-dark) !important;
+    font-size: 0.95rem !important;
+    outline: none !important;
+    box-shadow: var(--shadow-sm) !important;
+    transition: var(--transition) !important;
+}
+
+.db-catalog-wrapper .search-box-wrapper input:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 4px rgba(12, 84, 58, 0.15) !important;
+}
+
+.db-catalog-wrapper .clear-search-btn {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 4px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.db-catalog-wrapper .sort-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.db-catalog-wrapper .sort-select {
+    padding: 10px 20px !important;
+    height: auto !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--radius-md) !important;
+    background-color: var(--bg-card) !important;
+    color: var(--text-medium) !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+/* Category Tabs */
+.db-catalog-wrapper .category-nav {
+    margin-bottom: 30px;
+    overflow-x: auto;
+    padding: 4px 0;
+}
+
+.db-catalog-wrapper .category-tabs {
+    display: flex;
+    gap: 12px;
+    width: max-content;
+}
+
+.db-catalog-wrapper .category-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px !important;
+    border: 1px solid var(--border-color) !important;
+    background-color: var(--bg-card) !important;
+    border-radius: var(--radius-full) !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    color: var(--text-medium) !important;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.db-catalog-wrapper .category-tab.active {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(12, 84, 58, 0.25);
+}
+
+/* Product Grid */
+.db-catalog-wrapper .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    position: relative;
+    min-height: 200px;
+}
+
+.db-catalog-wrapper .product-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.db-catalog-wrapper .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(12, 84, 58, 0.15);
+}
+
+.db-catalog-wrapper .product-img-wrapper {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background-color: #f1f5f9;
+}
+
+.db-catalog-wrapper .product-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.db-catalog-wrapper .product-card:hover .product-img-wrapper img {
+    transform: scale(1.08);
+}
+
+.db-catalog-wrapper .product-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    z-index: 2;
+}
+
+.db-catalog-wrapper .product-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.db-catalog-wrapper .product-title {
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px;
+}
+
+.db-catalog-wrapper .product-price {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--primary-light);
+    margin-bottom: 12px;
+}
+
+.db-catalog-wrapper .product-description {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.db-catalog-wrapper .product-specs-summary {
+    list-style: none !important;
+    border-top: 1px solid var(--border-color);
+    padding-top: 14px !important;
+    margin-bottom: 20px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.db-catalog-wrapper .product-specs-summary li {
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-medium);
+}
+
+.db-catalog-wrapper .product-specs-summary li i {
+    color: var(--primary);
+    width: 14px;
+}
+
+.db-catalog-wrapper .product-footer-actions {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.db-catalog-wrapper .btn-whatsapp-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--primary) !important;
+    color: #ffffff !important;
+    padding: 12px 16px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+    border: none;
+}
+
+.db-catalog-wrapper .btn-whatsapp-cta:hover {
+    background-color: var(--whatsapp-green) !important;
+}
+
+.db-catalog-wrapper .btn-quickview {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9 !important;
+    color: var(--text-medium) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--radius-md) !important;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+/* Spinner & Empty State */
+.db-catalog-wrapper .catalog-loading {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+    gap: 16px;
+}
+
+.db-catalog-wrapper .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--primary);
+    border-radius: 50%;
+    animation: db-spin 1s linear infinite;
+}
+
+@keyframes db-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.db-catalog-wrapper .no-products-state {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 24px;
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+/* Modal Styling */
+.db-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.db-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.db-modal-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.db-modal-overlay.active .db-modal-card {
+    transform: scale(1);
+}
+
+.db-modal-close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.db-modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+}
+
+.db-modal-image-area {
+    position: relative;
+    height: 100%;
+    min-height: 300px;
+}
+
+.db-modal-image-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.db-modal-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--primary);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+}
+
+.db-modal-info-area {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.db-modal-title {
+    font-size: 1.6rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 10px;
+}
+
+.db-modal-price-tag {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary-light);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.db-modal-desc {
+    color: var(--text-medium);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.db-modal-specs h3 {
+    font-size: 0.95rem !important;
+    margin-bottom: 10px;
+}
+
+.db-specs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.db-specs-table td {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.db-specs-table td:first-child {
+    font-weight: 600;
+    width: 35%;
+}
+
+.db-modal-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background-color: var(--primary) !important;
+    color: #ffffff !important;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: var(--radius-md);
+    margin-top: 20px;
+}
+
+.db-modal-cta-btn:hover {
+    background-color: var(--whatsapp-green) !important;
+}
+
+/* Floating WA */
+.db-floating-wa-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    background-color: var(--whatsapp-green);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    z-index: 9999;
+    transition: var(--transition);
+}
+
+.db-floating-wa-btn:hover {
+    background-color: var(--whatsapp-dark);
+    transform: scale(1.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .db-modal-body {
+        grid-template-columns: 1fr;
+    }
+    .db-modal-image-area {
+        height: 200px;
+    }
+    .db-catalog-wrapper .hero-title.text-hitam-pekat {
+        font-size: 2rem !important;
+    }
+}
+</style>
+
+<div class="db-catalog-wrapper">
+    <!-- Hero Banner Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fa-solid fa-star"></i> Kualitas Terpercaya</span>
+            <h1 class="hero-title text-hitam-pekat">Produk Unggulan Kami</h1>
+            <p class="hero-subtitle text-hitam-pekat">
+                Menghadirkan produk pertanian unggulan dengan kualitas terpercaya untuk mendukung produktivitas dan kemajuan agribisnis Indonesia.
+            </p>
+        </div>
+    </section>
+
+    <!-- Toolbar -->
+    <div class="toolbar-section">
+        <div class="search-box-wrapper">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="db-productSearch" placeholder="Cari pupuk, benih, alat pertanian..." aria-label="Cari Produk">
+            <button id="db-clearSearchBtn" class="clear-search-btn" style="display: none;">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        
+        <div class="sort-wrapper">
+            <select id="db-productSort" class="sort-select">
+                <option value="default">Urutan Default</option>
+                <option value="name-asc">Nama (A - Z)</option>
+                <option value="name-desc">Nama (Z - A)</option>
+                <option value="price-asc">Harga Terendah</option>
+                <option value="price-desc">Harga Tertinggi</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Category Filter -->
+    <nav class="category-nav" aria-label="Kategori Produk">
+        <div class="category-tabs" id="db-categoryTabs">
+            <button class="category-tab active" data-category="all">
+                <i class="fa-solid fa-grip"></i> Semua Produk
+            </button>
+            <button class="category-tab" data-category="pupuk">
+                <i class="fa-solid fa-bottle-droplet"></i> Pupuk & Nutrisi
+            </button>
+            <button class="category-tab" data-category="benih">
+                <i class="fa-solid fa-seedling"></i> Benih Unggul
+            </button>
+            <button class="category-tab" data-category="pestisida">
+                <i class="fa-solid fa-shield-halved"></i> Perlindungan Tanaman
+            </button>
+            <button class="category-tab" data-category="peralatan">
+                <i class="fa-solid fa-screwdriver-wrench"></i> Alat & Mesin Tani
+            </button>
+        </div>
+    </nav>
+
+    <!-- Meta -->
+    <div style="margin-bottom: 20px; font-weight: 600;" id="db-resultsCount">
+        Menampilkan 0 produk
+    </div>
+
+    <!-- Product Grid -->
+    <section class="products-grid" id="db-productsGrid">
+        <div class="catalog-loading">
+            <div class="spinner"></div>
+            <p>Memuat katalog...</p>
+        </div>
+    </section>
+
+    <!-- Empty State -->
+    <div class="no-products-state" id="db-noProductsState" style="display: none;">
+        <i class="fa-regular fa-face-frown" style="font-size: 3rem; margin-bottom: 15px; color: var(--text-light);"></i>
+        <h3>Produk Tidak Ditemukan</h3>
+        <p>Maaf, kami tidak menemukan produk yang cocok.</p>
+        <button id="db-resetFiltersBtn" style="background-color: var(--primary); color:#ffffff; border:none; padding:10px 20px; border-radius:var(--radius-md); margin-top:15px; cursor:pointer;">Reset Filter</button>
+    </div>
+</div>
+
+<!-- Quick View Modal -->
+<div class="db-modal-overlay" id="db-productModal">
+    <div class="db-modal-card">
+        <button class="db-modal-close-btn" id="db-modalCloseBtn" aria-label="Tutup">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <div class="db-modal-body">
+            <div class="db-modal-image-area">
+                <img id="db-modalProductImg" src="" alt="Detail Produk">
+                <span id="db-modalProductBadge" class="db-modal-badge">Kategori</span>
+            </div>
+            
+            <div class="db-modal-info-area">
+                <h2 id="db-modalTitle" class="db-modal-title">Nama Produk</h2>
+                <div id="db-modalPrice" class="db-modal-price-tag">Rp 0</div>
+                <p id="db-modalDesc" class="db-modal-desc">Deskripsi lengkap.</p>
+                
+                <div class="db-modal-specs">
+                    <h3 style="font-weight: 700; color: var(--text-dark);">Spesifikasi & Keunggulan:</h3>
+                    <table class="db-specs-table">
+                        <tbody id="db-modalSpecsBody"></tbody>
+                    </table>
+                </div>
+                
+                <a href="#" id="db-modalWaBtn" target="_blank" class="db-modal-cta-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Tanya / Pesan Sekarang
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Floating WA Button -->
+<a href="https://wa.me/6281318466100" class="db-floating-wa-btn" target="_blank" aria-label="Hubungi via WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- JavaScript Logic -->
+<script>
+(function() {
+    const PHONE = "6281318466100";
+    
+    const PRODUCTS = [
+        {
+            id: 1,
+            title: "POC DBA Super (Pupuk Organik Cair)",
+            category: "pupuk",
+            price: 65000,
+            formattedPrice: "Rp 65.000 / Liter",
+            image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80",
+            description: "Pupuk Organik Cair (POC) DBA Super diformulasikan khusus dengan mikroba aktif penyubur tanah dan ekstrak bahan nabati pilihan. Sangat efektif untuk merangsang pembelahan sel, pertumbuhan vegetatif daun, serta memacu pembungaan dan pembuahan tanaman pangan maupun hortikultura.",
+            specs: {
+                "Volume": "1 Liter",
+                "Bentuk": "Cair (Konsentrat)",
+                "Kandungan": "N, P, K Organik, Asam Humat, Hormon Auxin",
+                "Aplikasi": "Disemprot ke daun (5ml/L) atau dikocor",
+                "Saran Pakai": "Setiap 7-10 hari sekali"
+            }
+        },
+        {
+            id: 2,
+            title: "Kompos Organik Granul DBA",
+            category: "pupuk",
+            price: 45000,
+            formattedPrice: "Rp 45.000 / Karung 25kg",
+            image: "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=600&q=80",
+            description: "Pupuk kompos organik berbentuk granul yang telah melalui proses fermentasi sempurna. Bebas dari biji gulma dan bakteri patogen. Membantu memperbaiki struktur fisik, kimia, dan biologi tanah yang keras.",
+            specs: {
+                "Berat Bersih": "25 kg",
+                "Bentuk": "Granul (Butiran)",
+                "Bahan Dasar": "Kotoran hewan terfermentasi, abu vulkanik",
+                "Kelembaban": "< 20%",
+                "Rekomendasi": "Pupuk dasar sebelum tanam"
+            }
+        },
+        {
+            id: 3,
+            title: "Benih Padi Inpari 32 Unggul DBA",
+            category: "benih",
+            price: 95000,
+            formattedPrice: "Rp 95.000 / Kemasan 5kg",
+            image: "https://images.unsplash.com/photo-1536882240095-0379873feb4e?auto=format&fit=crop&w=600&q=80",
+            description: "Benih padi bersertifikat varietas Inpari 32 dengan persentase daya tumbuh di atas 90%. Memiliki ketahanan yang baik terhadap penyakit Hawar Daun Bakteri (HDB) serta menghasilkan beras pulen premium.",
+            specs: {
+                "Berat Kemasan": "5 kg",
+                "Varietas": "Inpari 32 HDB",
+                "Daya Tumbuh": "Minimal 90%",
+                "Potensi Hasil": "8.5 - 10 Ton / Hektar",
+                "Umur Panen": "120 Hari"
+            }
+        },
+        {
+            id: 4,
+            title: "Benih Jagung Hibrida DBA-1",
+            category: "benih",
+            price: 85000,
+            formattedPrice: "Rp 85.000 / Kemasan 1kg",
+            image: "https://images.unsplash.com/photo-1551754625-70c90487530d?auto=format&fit=crop&w=600&q=80",
+            description: "Benih Jagung Hibrida F1 varietas unggulan dengan produktivitas tinggi. Memiliki perakaran yang sangat kuat sehingga tahan roboh akibat angin kencang. Warna bulir kuning orange mengkilap.",
+            specs: {
+                "Berat Kemasan": "1 kg",
+                "Jenis": "Hibrida F1",
+                "Daya Berkecambah": "Minimal 85%",
+                "Potensi Hasil": "11 Ton / Hektar"
+            }
+        },
+        {
+            id: 5,
+            title: "Biopestisida DBA Shield",
+            category: "pestisida",
+            price: 55000,
+            formattedPrice: "Rp 55.000 / Botol 500ml",
+            image: "https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=600&q=80",
+            description: "Insektisida organik cair berbasis minyak mimba (neem oil) dan ekstrak sereh wangi. Sangat efektif mengendalikan ulat grayak, kutu daun, kutu kebul, dan tungau tanpa residu kimia berbahaya.",
+            specs: {
+                "Volume": "500 ml",
+                "Bahan Aktif": "Azadirachtin (Minyak Mimba)",
+                "Dosis": "3 - 5 ml per Liter air",
+                "Keunggulan": "Organik dan aman bagi lingkungan"
+            }
+        },
+        {
+            id: 6,
+            title: "Fungisida Organik Trichoderma DBA",
+            category: "pestisida",
+            price: 40000,
+            formattedPrice: "Rp 40.000 / Kemasan 1kg",
+            image: "https://images.unsplash.com/photo-1574316071802-0d684efa7bf5?auto=format&fit=crop&w=600&q=80",
+            description: "Agens hayati pengendali jamur patogen tanah yang diformulasikan dengan jamur antagonis Trichoderma harzianum. Mencegah penyakit layu fusarium dan busuk akar.",
+            specs: {
+                "Berat Bersih": "1 kg",
+                "Bahan Aktif": "Trichoderma harzianum",
+                "Bentuk": "Serbuk",
+                "Aplikasi": "Dicampur kompos atau dikorcor"
+            }
+        },
+        {
+            id: 7,
+            title: "Alat Semprot Elektrik Premium",
+            category: "peralatan",
+            price: 380000,
+            formattedPrice: "Rp 380.000 / Unit",
+            image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80",
+            description: "Knapsack sprayer elektrik kapasitas 16 Liter dengan semburan stabil. Dilengkapi baterai rechargeable tahan lama yang mampu menyemprot hingga 18 tangki sekali charge.",
+            specs: {
+                "Kapasitas Tangki": "16 Liter",
+                "Tipe Baterai": "12V 8AH",
+                "Tekanan Pompa": "0.4 - 0.45 Mpa",
+                "Garansi": "1 Bulan"
+            }
+        },
+        {
+            id: 8,
+            title: "Alat Penguji Tanah 3-in-1",
+            category: "peralatan",
+            price: 75000,
+            formattedPrice: "Rp 75.000 / Unit",
+            image: "https://images.unsplash.com/photo-1464226184884-fa280b87c3a9?auto=format&fit=crop&w=600&q=80",
+            description: "Soil analyzer 3-in-1 untuk mengukur pH tanah, kelembaban, dan intensitas cahaya matahari. Bekerja mandiri tanpa baterai.",
+            specs: {
+                "Fungsi": "pH (3.5 - 8.0), Kelembaban, Cahaya",
+                "Panjang Probe": "20 cm",
+                "Daya": "Tanpa baterai"
+            }
+        }
+    ];
+
+    let category = "all";
+    let search = "";
+    let sort = "default";
+
+    const grid = document.getElementById("db-productsGrid");
+    const countEl = document.getElementById("db-resultsCount");
+    const searchInp = document.getElementById("db-productSearch");
+    const clearBtn = document.getElementById("db-clearSearchBtn");
+    const sortSel = document.getElementById("db-productSort");
+    const tabs = document.getElementById("db-categoryTabs");
+    const emptyState = document.getElementById("db-noProductsState");
+    const resetBtn = document.getElementById("db-resetFiltersBtn");
+
+    const modal = document.getElementById("db-productModal");
+    const modalClose = document.getElementById("db-modalCloseBtn");
+    const modalImg = document.getElementById("db-modalProductImg");
+    const modalBadge = document.getElementById("db-modalProductBadge");
+    const modalTitle = document.getElementById("db-modalTitle");
+    const modalPrice = document.getElementById("db-modalPrice");
+    const modalDesc = document.getElementById("db-modalDesc");
+    const modalSpecs = document.getElementById("db-modalSpecsBody");
+    const modalWa = document.getElementById("db-modalWaBtn");
+
+    function render(data = PRODUCTS) {
+        grid.innerHTML = "";
+        if (data.length === 0) {
+            emptyState.style.display = "flex";
+            countEl.textContent = "Menampilkan 0 produk";
+            return;
+        }
+        emptyState.style.display = "none";
+        countEl.textContent = `Menampilkan ${data.length} produk`;
+
+        data.forEach(p => {
+            const card = document.createElement("article");
+            card.className = "product-card";
+            
+            let specsHtml = "";
+            let idx = 0;
+            for (const [k, v] of Object.entries(p.specs)) {
+                if (idx >= 2) break;
+                specsHtml += `<li><i class="fa-solid fa-circle-check"></i> <strong>${k}:</strong> ${v}</li>`;
+                idx++;
+            }
+
+            const txt = `Halo Doa Bangsa Agrobisnis,\n\nSaya tertarik dengan produk:\n📦 *${p.title}*\n💰 *Harga:* ${p.formattedPrice}\n\nMohon informasi pemesanan. Terima kasih.`;
+            const link = `https://wa.me/${PHONE}?text=${encodeURIComponent(txt)}`;
+
+            card.innerHTML = `
+                <div class="product-img-wrapper">
+                    <span class="product-badge">${p.category.toUpperCase()}</span>
+                    <img src="${p.image}" alt="${p.title}" loading="lazy">
+                </div>
+                <div class="product-content">
+                    <h3 class="product-title" style="margin:0 0 10px 0 !important; font-size:1.15rem !important;">${p.title}</h3>
+                    <div class="product-price">${p.formattedPrice}</div>
+                    <p class="product-description">${p.description}</p>
+                    <ul class="product-specs-summary">${specsHtml}</ul>
+                    <div class="product-footer-actions">
+                        <a href="${link}" target="_blank" class="btn-whatsapp-cta">
+                            <i class="fa-brands fa-whatsapp"></i> Tanya Produk
+                        </a>
+                        <button class="btn-quickview" data-id="${p.id}">
+                            <i class="fa-regular fa-eye"></i> Detail
+                        </button>
+                    </div>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+
+        // Add events to dynamically rendered buttons
+        grid.querySelectorAll(".btn-quickview").forEach(btn => {
+            btn.addEventListener("click", () => {
+                openModal(parseInt(btn.dataset.id));
+            });
+        });
+    }
+
+    function filterAndSort() {
+        let filtered = PRODUCTS.filter(p => {
+            const mCat = category === "all" || p.category === category;
+            const mSrc = p.title.toLowerCase().includes(search) || p.description.toLowerCase().includes(search);
+            return mCat && mSrc;
+        });
+
+        if (sort === "name-asc") {
+            filtered.sort((a, b) => a.title.localeCompare(b.title));
+        } else if (sort === "name-desc") {
+            filtered.sort((a, b) => b.title.localeCompare(a.title));
+        } else if (sort === "price-asc") {
+            filtered.sort((a, b) => a.price - b.price);
+        } else if (sort === "price-desc") {
+            filtered.sort((a, b) => b.price - a.price);
+        }
+
+        render(filtered);
+    }
+
+    function openModal(id) {
+        const p = PRODUCTS.find(prod => prod.id === id);
+        if (!p) return;
+        modalImg.src = p.image;
+        modalBadge.textContent = p.category.toUpperCase();
+        modalTitle.textContent = p.title;
+        modalPrice.textContent = p.formattedPrice;
+        modalDesc.textContent = p.description;
+
+        modalSpecs.innerHTML = "";
+        for (const [k, v] of Object.entries(p.specs)) {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `<td>${k}</td><td>${v}</td>`;
+            modalSpecs.appendChild(tr);
+        }
+
+        const txt = `Halo Doa Bangsa Agrobisnis,\n\nSaya tertarik dengan produk:\n📦 *${p.title}*\n💰 *Harga:* ${p.formattedPrice}\n\nMohon info pemesanan. Terima kasih.`;
+        modalWa.href = `https://wa.me/${PHONE}?text=${encodeURIComponent(txt)}`;
+
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+    // Events
+    searchInp.addEventListener("input", (e) => {
+        search = e.target.value.toLowerCase().trim();
+        clearBtn.style.display = search.length > 0 ? "flex" : "none";
+        filterAndSort();
+    });
+
+    clearBtn.addEventListener("click", () => {
+        searchInp.value = "";
+        search = "";
+        clearBtn.style.display = "none";
+        filterAndSort();
+    });
+
+    sortSel.addEventListener("change", (e) => {
+        sort = e.target.value;
+        filterAndSort();
+    });
+
+    tabs.addEventListener("click", (e) => {
+        const btn = e.target.closest(".category-tab");
+        if (!btn) return;
+        tabs.querySelectorAll(".category-tab").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        category = btn.dataset.category;
+        filterAndSort();
+    });
+
+    resetBtn.addEventListener("click", () => {
+        searchInp.value = "";
+        search = "";
+        clearBtn.style.display = "none";
+        sortSel.value = "default";
+        sort = "default";
+        tabs.querySelectorAll(".category-tab").forEach(b => b.classList.remove("active"));
+        tabs.querySelector('[data-category="all"]').classList.add("active");
+        category = "all";
+        filterAndSort();
+    });
+
+    modalClose.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+
+    // Initial render
+    render();
+})();
+</script>
