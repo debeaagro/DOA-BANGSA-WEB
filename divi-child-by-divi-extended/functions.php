@@ -44,7 +44,7 @@ function diviextended_fdctg_enqueue_styles() {
 
 	wp_enqueue_style(
 		'divi-child-custom',
-		DIVIEXTENDED_FDCTG_URI . '/assets/css/custom.css',
+		DIVIEXTENDED_FDCTG_URI . '/custom.css',
 		array( 'divi-child-style' ),
 		DIVIEXTENDED_FDCTG_VERSION
 	);
@@ -62,7 +62,7 @@ function diviextended_fdctg_enqueue_scripts() {
 
 	wp_enqueue_script(
 		'divi-child-custom',
-		DIVIEXTENDED_FDCTG_URI . '/assets/js/custom.js',
+		DIVIEXTENDED_FDCTG_URI . '/custom.js',
 		array( 'jquery' ),
 		DIVIEXTENDED_FDCTG_VERSION,
 		true

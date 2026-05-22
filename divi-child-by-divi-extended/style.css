@@ -127,3 +127,245 @@ div.n2-section-smartslider h2 *,
   color: #ff0000 !important; /* warna merah */
 }
 
+/* ==========================================================================
+   Modern News Column (MetaSlider 1508) & Elegant Date Badge
+   ========================================================================== */
+
+/* Slider Container Card Aesthetic (Keep container clean) */
+.metaslider-1508,
+#metaslider-container-1508 {
+    position: relative !important;
+}
+
+/* Individual Slide Items - Styling each slide as an independent vertical card */
+.metaslider-1508 .slides li {
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+    background: #ffffff !important;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+/* Ensure slide images and anchors are flex children */
+.metaslider-1508 .slides li > a,
+.metaslider-1508 .slides li > img {
+    display: block !important;
+    width: 100% !important;
+    position: relative !important;
+}
+
+/* Slide hover lift effect (Animate individual slide card) */
+.metaslider-1508 .slides li:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 20px 40px rgba(12, 84, 58, 0.12) !important;
+    z-index: 10 !important;
+}
+
+/* Zoom/Scale Hover effect on individual slide image */
+.metaslider-1508 .slides li img {
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.metaslider-1508 .slides li:hover img {
+    transform: scale(1.04) !important;
+}
+
+/* Caption Wrapper (Positioned BELOW the photo) */
+.metaslider-1508 .caption-wrap,
+.metaslider-1508 .slides .caption {
+    position: relative !important; /* Pushed below the image */
+    background: #ffffff !important; /* Clean solid background */
+    color: #1e293b !important;
+    padding: 20px 24px !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    z-index: 5 !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+    transition: background-color 0.4s ease !important;
+}
+
+.metaslider-1508 .slides li:hover .caption-wrap,
+.metaslider-1508 .slides li:hover .caption {
+    background: #f8fafc !important; /* Subtle tint on hover */
+}
+
+/* News Title Styling */
+.metaslider-1508 .caption a,
+.metaslider-1508 .caption-wrap a,
+.metaslider-1508 .news-title-link,
+.metaslider-1508 .news-title-text {
+    display: inline-block !important;
+    color: #0c543a !important; /* Hijau Agrobisnis */
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    text-decoration: none !important;
+    margin: 0 0 6px 0 !important;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), color 0.3s ease !important;
+}
+
+/* Make title shift up slightly when individual slide is hovered */
+.metaslider-1508 .slides li:hover .caption a,
+.metaslider-1508 .slides li:hover .caption-wrap a,
+.metaslider-1508 .slides li:hover .news-title-link {
+    transform: translateY(-2px) !important;
+}
+
+.metaslider-1508 .caption a:hover,
+.metaslider-1508 .caption-wrap a:hover,
+.metaslider-1508 .news-title-link:hover {
+    color: #1a9c6b !important;
+}
+
+/* Event Metadata Row */
+.metaslider-1508 .event-meta-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+    margin-top: 12px !important;
+    border-top: 1px dashed rgba(0, 0, 0, 0.08) !important;
+    padding-top: 12px !important;
+}
+
+/* Individual Meta Items (Date & Time) */
+.metaslider-1508 .event-meta-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: 13px !important;
+    color: #64748b !important;
+    font-weight: 500 !important;
+    transition: color 0.3s ease !important;
+}
+
+.metaslider-1508 .slides li:hover .event-meta-item {
+    color: #475569 !important;
+}
+
+/* Vector SVG Icons */
+.metaslider-1508 .event-meta-item .meta-icon {
+    width: 14px !important;
+    height: 14px !important;
+    fill: #0c543a !important;
+    transition: transform 0.3s ease, fill 0.3s ease !important;
+}
+
+.metaslider-1508 .slides li:hover .event-meta-item .meta-icon {
+    fill: #1a9c6b !important;
+    transform: scale(1.1) !important;
+}
+
+/* Elegant Floating Date Badge */
+.metaslider-date-badge {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    padding: 6px 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    font-family: 'Outfit', 'Inter', sans-serif;
+    opacity: 0;
+    transform: translateY(-12px);
+    animation: elegantBadgeReveal 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation-delay: 0.4s;
+    pointer-events: none;
+}
+
+/* Pulsing Active Indicator Dot */
+.metaslider-date-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #ef4444;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    animation: liveIndicatorPulse 1.8s infinite;
+    margin-right: 4px;
+}
+
+/* Calendar Icon Wrapper */
+.metaslider-date-badge .badge-icon {
+    display: flex;
+    align-items: center;
+    color: #0c543a;
+}
+
+.metaslider-date-badge .badge-icon svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+    animation: iconFloat 3s infinite ease-in-out;
+}
+
+/* Day Badge (Indonesian) */
+.metaslider-date-badge .badge-day {
+    font-weight: 700;
+    color: #0c543a;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(12, 84, 58, 0.08);
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+/* Divider line */
+.metaslider-date-badge .badge-divider {
+    color: #cbd5e1;
+    font-size: 12px;
+}
+
+/* Date text */
+.metaslider-date-badge .badge-date {
+    font-weight: 600;
+    color: #334155;
+    font-size: 11px;
+}
+
+/* Keyframe Animations */
+@keyframes elegantBadgeReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes liveIndicatorPulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    }
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+}
